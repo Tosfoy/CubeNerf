@@ -1,0 +1,19 @@
+name: CubeNerf
+version: '1.1'
+main: com.tosfoy.cubenerf.Main
+api-version: 1.20
+authors: [Tosfoy]
+description: Modifies autofarm behavior based on configured settings.
+
+commands:
+  cubenerf:
+    description: Reloads the CubeNerf plugin configuration.
+    usage: /<command> reload
+    aliases: [cn]
+    permission: cubenerf.reload
+    permission-message: You do not have permission to perform this command.
+
+permissions:
+  cubenerf.reload:
+    description: Allows reloading the CubeNerf configuration.
+    default: op

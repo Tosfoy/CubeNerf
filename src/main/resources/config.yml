@@ -1,0 +1,180 @@
+# The main purpose of this plugin is to disable selected blocks from being affected by pistons and other redstone elements.
+# This is useful to nerf farms or disable flying machines altogether, while still allowing other blocks to interact with pistons.
+# Villager crop harvesting can also be disabled to deter large villager auto farms.
+
+# After changing config, run command "/cn reload" in game or in console to finalize the changes.
+
+# When set to false, disabled pistons will stay where they are placed, and simply not work to break any disabled blocks.
+# When set to true, disabled pistons will break upon attempted firing.
+break_piston_on_disable: false
+
+# When set to true, pistons will drop to the ground if broken by the plugin.
+# When set to false, pistons will disappear if broken by the plugin.
+# (Requires break_piston_on_disable: true)
+drop_piston_on_break: true
+
+
+# This option enables or disables pistons from interacting with the configurable ist of blocks.
+disable_piston_by_block: true
+
+# Add or Remove blocks. Use the following link as guidance for formatting block names
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+disabled_blocks:
+  - PUMPKIN
+  - CARVED_PUMPKIN
+  - MELON
+  - SUGAR_CANE
+  - BAMBOO_SAPLING
+  - BAMBOO
+
+# Please note that a single bamboo shoot in the ground is classified as BAMBOO_SAPLING.
+# A bamboo shoot that has grown two blocks or higher is classified as BAMBOO.
+
+
+# This option enables or disables honey and slime blocks from interacting with the configurable list of blocks.
+disable_slime_honey_interaction_by_block: true
+
+# Determines if slime and honey blocks can interact with crop blocks
+disabled_slime_honey_interactions:
+  - PUMPKIN
+  - CARVED_PUMPKIN
+  - MELON
+  - SUGAR_CANE
+  - BAMBOO_SAPLING
+  - BAMBOO
+
+
+# When true, allows minecarts pushed by slime or honey blocks to interact with blocks otherwise restricted
+allow_minecart_interactions: false
+
+
+# Enable anti-dispenser
+anti-dispenser-enable: true
+
+# List of disabled dispenser materials
+disabled-dispenser-items:
+  - DISPENSER
+  - BONE_MEAL
+  - WATER_BUCKET
+
+# List of disabled blocks to be affected by dispensers.
+disabled-dispenser-blocks:
+  - CACTUS
+  - SUGAR_CANE
+  - SUGAR_CANE_BLOCK
+  - REEDS
+  - BAMBOO
+  - MELON
+  - MELON_STEM
+  - MELON_BLOCK
+  - ATTACHED_MELON_STEM
+  - PUMPKIN
+  - PUMPKIN_STEM
+  - ATTACHED_PUMKIN_STEM
+  - WHEAT
+  - CROPS
+  - CARROT
+  - CARROTS
+  - POTATO
+  - POTATOES
+  - BEETROOT
+  - BEETROOTS
+  - BEETROOT_BLOCK
+  - SWEET_BERRY_BUSH
+  - COCOA
+  - CAVE_VINES
+  - CAVE_VINES_PLANT
+  - NETHER_WART
+  - CHORUS_PLANT
+  - CHORUS_FLOWER
+  - KELP
+  - BEE_NEST
+  - BEEHIVE
+  - WEEPING_VINES
+  - WEEPING_VINES_PLANT
+  - TWISTING_VINES
+  - TWISTING_VINES_PLANT
+  - BIG_DRIPLEAF
+  - AMETHYST_CLUSTER
+  - DRIPSTONE_BLOCK
+  - POINTED_DRIPSTONE
+  - MANGROVE_LEAVES
+
+
+# Enable anti-observer
+anti-observer-enable: false
+# List of blocks that cannot trigger observers when anti-observer-enable is set to true.
+disabled-observer-blocks:
+  - SUGAR_CANE
+  - BAMBOO
+
+
+# Prevents pistons from pushing blocks into Withers to stop suffocation exploits
+prevent-wither-suffocation: false
+
+# Prevents dispensers from shooting projectiles into Withers to stop aggro exploits
+# (e.g. aggroing a Wither to destroy cobblestone generators for infinite resources)
+prevent-dispenser-wither-aggro: false
+
+# Disables Villagers from harvesting crops when set to true
+prevent-villager-harvesting: false
+
+
+#Prevents players from being able to break crops in the below list while in a minecart.
+prevent-harvesting-from-minecart: false
+
+#List of blocks/crops that players cannot break while in a minecart if the above is set to true.
+disabled-crops-from-minecart:
+  - PUMPKIN_STEM
+  - MELON_STEM
+  - CARROTS
+  - POTATOES
+  - WHEAT
+  - NETHER_WART
+  - PUMPKIN
+  - CARVED_PUMPKIN
+  - MELON
+  - SUGAR_CANE
+  - BAMBOO_SAPLING
+  - BAMBOO
+  - BEETROOTS
+
+
+#Prevents players from being able to break crops in the below list while sitting on a mob with a saddle.
+prevent-harvesting-from-saddle: false
+
+#List of blocks/crops that players cannot break while in a saddle if the above is set to true.
+disabled-crops-from-saddle:
+  - PUMPKIN_STEM
+  - MELON_STEM
+  - CARROTS
+  - POTATOES
+  - WHEAT
+  - NETHER_WART
+  - PUMPKIN
+  - CARVED_PUMPKIN
+  - MELON
+  - SUGAR_CANE
+  - BAMBOO_SAPLING
+  - BAMBOO
+  - BEETROOTS
+
+
+#Prevents players from being able to break crops in the below list while in a boat.
+prevent-harvesting-from-boat: false
+
+#List of blocks/crops that players cannot break while in a boat if the above is set to true.
+disabled-crops-from-boat:
+  - PUMPKIN_STEM
+  - MELON_STEM
+  - CARROTS
+  - POTATOES
+  - WHEAT
+  - NETHER_WART
+  - PUMPKIN
+  - CARVED_PUMPKIN
+  - MELON
+  - SUGAR_CANE
+  - BAMBOO_SAPLING
+  - BAMBOO
+  - BEETROOTS
